@@ -1,0 +1,57 @@
+<ion-header>
+<ion-toolbar color="dark">
+  <ion-title slot="start">POLITICAS Y CONDICIONES</ion-title>
+  <ion-buttons slot="start" color="dark">
+ <ion-button *ngIf="!uid.length" [routerLink]="['/login']">
+  <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button  *ngIf="uid.length" (click)="goToHome()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+    
+
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content color="dark">
+<ion-card color="medium">
+<ion-text color="dark">
+  <ion-list>
+  <ion-item>
+     <h5>1. Al utilizar cualquier servicio actual o futuro de <b>VOZ PARA LA GENTE</b>
+     se estara sujeto a los lineamientos y condiciones aplicables a tal o cual servicio.
+    </h5>
+  </ion-item>
+
+  <ion-item> 
+     <h5>2. <B>Cualquier Usuario como Portavoz</B> que desee acceder a usar el portal y los Servicios podra hacerlo sujetandose a estas Politicas y Condiciones.
+     </h5>
+     </ion-item>
+
+     <ion-item>  
+        <h5>3. <B>Con su registro y utilizacion del Portal</B>, los Usuarios estan manifiestando su aceptacion, expresa e inequivoca de las Policias y Condiciones.
+    </h5> 
+  </ion-item>
+
+    <ion-item>
+       <h5>4. La utilizacion de <b>VOZ PARA LA GENTE</b> queda estrictamente <b> PROHIBIDA RESPECTO A MENORES DE EDAD</b>, cuya responsabilidad recae en los padres o representantes legales.
+    </h5> 
+  </ion-item>
+
+    <ion-item> 
+        <h5>5. <b>VOZ PARA LA GENTE</b> no se hace responsable ante posibles conflictos que puedan ocurrir por los usos de forma indebida de la plataforma.
+    </h5>        
+  </ion-item>
+
+  <ion-item> 
+      <h5>6. CUALQUIER PERSONA QUE NO ACEPTE ESTAS POLITICAS Y CONDICIONES GENERALES, DEBERA ABSTENERSE DE UTILIZAR EL PORTAL Y LOS SERVICIOS DE  <b>VOZ PARA LA GENTE</b>
+  </h5>        
+</ion-item>
+
+  </ion-list>
+</ion-text>
+</ion-card>
+</ion-content>

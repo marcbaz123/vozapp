@@ -1,0 +1,27 @@
+.imgRedonda {
+    width:300px;
+    height:300px;
+    border-radius:150px;
+}
+.custom-form {
+
+  background: rgba(150, 150, 150, 0.15);
+  background-color: #fdff949f;
+  box-shadow: 13px 13px 20px #f8cd9b8c, -13px -13px 20px #ffffff;
+  color: black;
+  
+}
+.myphoto {
+    height: 70vh !important;
+    width: auto !important;
+    align-items: center;
+    }
+    .showcase {
+      background-image: url("https://firebasestorage.googleapis.com/v0/b/portavozapp.appspot.com/o/maxresdefault.jpg?alt=media&token=cac366cc-74ff-459b-a43d-ac2840c81d6a");
+      height: auto;
+      width: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+   

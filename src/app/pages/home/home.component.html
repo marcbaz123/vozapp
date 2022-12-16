@@ -1,0 +1,91 @@
+
+<ion-content >
+  <!-- Boton de hamburguesa-->
+  <ion-header >
+    <ion-toolbar  color="dark"  >
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    
+      <ion-title>Una voz Para la Gente</ion-title>
+
+      <div slot="end">
+        <ion-buttons slot="end">
+          <ion-button [routerLink]="['/perfil']">
+            <div *ngIf="!uid.length">
+              <ion-icon slot="icon-only" name="person-circle" >
+              
+              </ion-icon>
+              </div>
+  
+              <div *ngIf="uid.length">
+          
+                <img  class="imgRedonda" [src]="this.usuario.foto">
+            
+                </div>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Fin de Boton de hamburguesa-->
+  
+<h3 class="subtitulo encabezado">Portavoces Disponibles</h3>
+<div style="text-align: end; margin: 10px">
+ <!-- <ion-button (click)="nuevo()" class="normal" color="dark">Nuevo Portavoz</ion-button>-->
+</div>
+
+  
+<ion-card  *ngFor="let portavoz of portavoces" >
+  <ion-card-header>
+    <ion-card-title style="text-align:center">{{portavoz.nombre}}</ion-card-title>
+   
+        
+  </ion-card-header>
+
+  <ion-card-content >
+    
+  <ion-item>
+    <img width="150" height="250"  class="image" [src]="portavoz.foto">
+  </ion-item>
+  <ion-item >
+    {{portavoz.descripcion}}
+  </ion-item>
+   
+  <ion-accordion-group>
+    <ion-accordion class="showcase" value="first">
+      <ion-item slot="header">
+        <ion-label>Contactos</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content" >
+        <ion-item >
+          <h3>Contactar por WhatsApp</h3>
+          <ion-buttons slot="end">
+    
+       <ion-button (click)=" newPortavoz = portavoz ; openWhatsapp()">
+    
+         <ion-icon slot="icon-only" color="success" name="logo-whatsapp"></ion-icon>
+       </ion-button>
+         </ion-buttons>
+       </ion-item>
+       <ion-item>
+        <h3>Correo</h3>
+      
+  
+   
+      <h6 slot="end"> {{portavoz.correo}}</h6>
+     
+     </ion-item>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+ 
+  </ion-card-content>
+</ion-card> <!--
+<ion-item *ngFor="let usuario of usuarios" >
+  
+  {{usuario.nombre}} - {{usuario.uid}}
+</ion-item>
+</ion-content>
+
+-->

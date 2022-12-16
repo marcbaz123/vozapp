@@ -24,3 +24,49 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,600;1,100&display=swap');
+
+.titulo{
+font-family: 'Raleway', 'sans-serif';
+font-size: 22.5px;
+font-weight: bold;
+
+}
+
+.subtitulo{
+
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 20px;
+    //font-weight: bold;
+}
+
+.normal{
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 17x;
+   // font-weight: bold;
+
+}
+.encabezado {
+    // background: #f3f3eb;
+     border-radius: 30px;
+     margin: 20px;
+     text-align: center;
+     padding: 10px;
+ }
+ .image{
+     padding: 10px;
+     border: 1px solid auto;
+     margin: auto;
+     width: 100%;
+     border-radius: 20px;
+ }
+ 
+.showcase {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/portavozapp.appspot.com/o/maxresdefault.jpg?alt=media&token=cac366cc-74ff-459b-a43d-ac2840c81d6a");
+ height: auto;
+   width: auto;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  
+ }

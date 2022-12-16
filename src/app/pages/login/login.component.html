@@ -1,0 +1,58 @@
+
+<ion-content >
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+   <ion-header [translucent]="true">
+    
+
+  
+   <ion-card class="showcase">
+   
+    
+    <ion-card-content>
+      <ion-toolbar>
+        <ion-title style="text-align:center">
+          Iniciar Sesion
+    </ion-title>
+       </ion-toolbar>
+       <ion-item>
+        <ion-label class="normal" position="floating">
+         Email:
+        </ion-label>
+        <ion-input [(ngModel)]="usuario.correo" class="normal" type="text" inputmode="text">
+        </ion-input>
+      </ion-item>
+    <ion-item>
+      <ion-label class="normal" position="floating">
+        Contraseña:
+       </ion-label>
+       <ion-input [(ngModel)]="usuario.contra" class="normal" type="password" inputmode="password">
+       </ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>I agree to the terms and conditions</ion-label>
+    </ion-item>
+     <div style="text-align: end; margin: 10px">    
+      <ion-button (click)="ingresar()" class="normal" color="dark">
+      
+        <a>ingresar</a>
+      </ion-button>  
+        
+    </div>
+    
+
+    </ion-card-content>
+ </ion-card>
+  
+   
+</ion-header>
+ </ion-content>
+ 
+ <ion-footer>
+ <ion-toolbar color="none">
+  <b slot="start">Si aun no tenes una cuenta</b> <a slot="end" routerLink='/registro'> Registrate <ion-icon name="chevron-forward-outline"></ion-icon></a> 
+ </ion-toolbar>
+ </ion-footer>

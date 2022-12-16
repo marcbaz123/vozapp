@@ -1,0 +1,95 @@
+
+<ion-content>
+  
+  <!-- Boton de hamburguesa-->
+   <ion-header>
+     <ion-toolbar>
+       <!-- Fin de Boton de hamburguesa-->
+       <ion-title slot="start" class="titulo">
+         Perfil
+       </ion-title>
+       <div slot="end">
+         <ion-buttons color="dark" slot="start">
+           <ion-button [routerLink]="['/login']">
+          <div>
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+ 
+           </ion-button>
+         </ion-buttons>
+       </div>
+     </ion-toolbar>
+   </ion-header>
+ 
+ 
+   
+   <ion-item>
+     <ion-label class="normal" position="floating">
+      Email:
+     </ion-label>
+     <ion-input [(ngModel)]="usuario.correo" class="normal" type="text" inputmode="text">
+     </ion-input>
+   </ion-item>
+ <ion-item>
+   <ion-label class="normal" position="floating">
+     Contrasenha:
+    </ion-label>
+    <ion-input [(ngModel)]="usuario.contra" class="normal" type="password" inputmode="password">
+    </ion-input>
+  </ion-item>
+   
+   <ion-item>
+     <ion-label class="normal" position="floating">
+      Nombre:
+     </ion-label>
+     <ion-input [(ngModel)]="usuario.nombre" class="normal" inputmode="email">
+     </ion-input>
+   </ion-item>
+   
+   <ion-item>
+     <ion-label class="normal" position="floating">
+      Celular:
+     </ion-label>
+     <ion-input [(ngModel)]="usuario.celular" class="normal" inputmode="text">
+     </ion-input>
+   </ion-item>
+   
+   <ion-item>
+     <ion-label class="normal" position="floating">
+      Referencia de vivienda:
+     </ion-label>
+     <ion-input [(ngModel)]="usuario.referencia" class="normal" type="text" nputmode="numeric">
+     </ion-input>
+   </ion-item>
+     
+   <ion-item>
+     
+     <ion-label class="normal">
+     Foto:
+     </ion-label>
+     <ion-buttons slot="end">
+     <ion-button>
+       <label for="file-upload">
+         <ion-icon slot="icon-only" name="images"></ion-icon>
+       </label>
+ 
+      <input (change)="newImageUpload($event)"  id="file-upload" style="display: none" type="file" accept="image/*">
+     </ion-button>
+   </ion-buttons>
+   </ion-item>
+ 
+   <ion-item>
+     <img  class="imgPerfil" [src]="usuario.foto">
+   </ion-item>
+   
+   <div style="text-align: end; margin: 10px">
+     <ion-button (click)="registrarse()" class="normal" color="dark">Registrarse</ion-button>
+     </div>
+ 
+ </ion-content>
+ 
+ <ion-footer>
+ <ion-toolbar>
+     <img width="100%" src="https://i.postimg.cc/sx36vd9y/Logo-V-1.jpg">
+   </ion-toolbar>
+ </ion-footer>

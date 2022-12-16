@@ -1,0 +1,70 @@
+<ion-content>
+  <ion-header >
+    <ion-toolbar  color="dark"  >
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    
+      <ion-title>Una voz Para la Gente</ion-title>
+
+      <div slot="end">
+        <ion-buttons slot="end">
+          <ion-button [routerLink]="['/perfil']">
+            <div *ngIf="!uid.length">
+              <ion-icon slot="icon-only" name="person-circle" >
+              
+              </ion-icon>
+              </div>
+  
+              <div *ngIf="uid.length">
+          
+                <img  class="imgRedonda" [src]="this.usuario.foto">
+            
+                </div>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-card>
+  <img alt="Una Voz Para La Gente" src="https://firebasestorage.googleapis.com/v0/b/portavozapp.appspot.com/o/Logo-V-2.jpg?alt=media&token=6f5fa27a-f7f9-45bc-b9be-09b3992223e4"/>
+  <ion-card-header>
+    <ion-card-title>CONVERTITE EN UNA VOZ PARA LA GENTE</ion-card-title>
+    <ion-card-subtitle>SI TENES LIDERAZGO, ACTITUD Y RESPONSABILIDAD LOS LIMITES SON MENTALES!</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content class="showcase">
+  
+    <ion-accordion-group>
+      <ion-accordion class="showcase" value="first">
+        <ion-item slot="header">
+          <ion-label>Contactos</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content" >
+          <ion-item >
+            <h3>Contactar con el administrador por WhatsApp</h3>
+            <ion-buttons slot="end">
+      
+         <ion-button (click)="openWhatsapp()">
+      
+           <ion-icon slot="icon-only" color="success" name="logo-whatsapp"></ion-icon>
+         </ion-button>
+           </ion-buttons>
+         </ion-item>
+         <ion-item>
+          <h3>Correo</h3>
+        
+    
+     
+        <a slot="end"> marcbaz@email.com</a>
+       
+       </ion-item>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+   
+  </ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,0 +1,148 @@
+<ion-header>
+  
+</ion-header>
+<!-- Boton de hamburguesa-->
+<ion-content >
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title slot="start" class="titulo">
+        Administracion
+      </ion-title>
+     
+    </ion-toolbar>
+  </ion-header>
+  <!-- Fin de Boton de hamburguesa-->
+  
+  <h3 class="subtitulo encabezado">Gestion de Portavoces </h3>
+  <div style="text-align: end; margin: 10px">
+    <ion-button (click)="nuevo()" class="normal" color="dark">Nuevo Portavoz</ion-button>
+    </div>
+<div *ngIf="enableNewPortavoz">
+
+<ion-item>
+  <ion-buttons slot="end">
+    <ion-button style="margin: 30px;" expand="full" color="dark" 
+ (click)="guardarPortavoces()">
+ <ion-icon slot="icon-only" name="save-sharp"></ion-icon>
+ </ion-button>
+    <ion-button (click)="enableNewPortavoz = false" color="dark">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-item>
+
+  <ion-item>
+    <ion-label class="normal" position="floating">
+     Nombre:
+    </ion-label>
+    <ion-input [(ngModel)]="newPortavoz.nombre" class="normal" type="text" inputmode="text">
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label class="normal" position="floating">
+     Correo Electronico:
+    </ion-label>
+    <ion-input [(ngModel)]="newPortavoz.correo" class="normal" inputmode="email">
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label class="normal" position="floating">
+     Descripcion:
+    </ion-label>
+    <ion-input [(ngModel)]="newPortavoz.descripcion" class="normal" inputmode="text">
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label class="normal" position="floating">
+     Edad:
+    </ion-label>
+    <ion-input [(ngModel)]="newPortavoz.edad" class="normal" type="number" nputmode="numeric">
+    </ion-input>
+  </ion-item>
+    
+  <ion-item>
+    <ion-label class="normal" position="floating">
+     Contacto:
+    </ion-label>
+    <ion-input [(ngModel)]="newPortavoz.celular" class="normal" type="number" nputmode="numeric">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    
+    <ion-label class="normal">
+    Foto:
+    </ion-label>
+    <ion-buttons slot="end">
+    <ion-button>
+      <label for="file-upload">
+        <ion-icon slot="icon-only" name="images"></ion-icon>
+      </label>
+
+      <input (change)="newImageUpload($event)"  id="file-upload" style="display: none" type="file" accept="image/*">
+    </ion-button>
+  </ion-buttons>
+  </ion-item>
+
+  <ion-item >
+    <img  class="image" [src]="newPortavoz.foto">
+  </ion-item>
+  
+ 
+</div>
+  
+<ion-card >
+ <ion-item *ngFor="let portavoz of portavoces" >
+  <ion-label class="normal">
+    {{portavoz.nombre}} -- {{portavoz.correo}} -- {{portavoz.descripcion}}
+  </ion-label>
+  <ion-buttons slot="end">
+    <ion-button (click)="newPortavoz = portavoz ; enableNewPortavoz = true;">
+      <ion-icon color="dark" slot="icon-only" name="create-sharp"></ion-icon>
+    </ion-button>
+<ion-button (click)="deletePortavoz(portavoz)">
+  <ion-icon slot="icon-only" color="danger" name="trash-bin"></ion-icon>
+</ion-button>
+  </ion-buttons>
+ </ion-item>
+ 
+  
+
+</ion-card>
+<!--
+   <ion-card *ngFor="let portavoz of portavoces" >
+  <ion-card-header>
+    <ion-card-title>{{portavoz.nombre}}</ion-card-title>
+    <ion-card-subtitle>{{portavoz.correo}}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    
+  <ion-item>
+    <img  class="image" [src]="portavoz.foto">
+  </ion-item>
+  <ion-item>
+    {{portavoz.descripcion}}
+  </ion-item>
+    <ion-item>
+      <ion-buttons slot="end">
+       <ion-button (click)="newPortavoz = portavoz ; enableNewPortavoz = true;">
+         <ion-icon slot="icon-only" name="create-sharp"></ion-icon>
+       </ion-button>
+   <ion-button (click)="deletePortavoz(portavoz)">
+     <ion-icon slot="icon-only" color="danger" name="trash-bin"></ion-icon>
+   </ion-button>
+     </ion-buttons>
+   </ion-item>
+  </ion-card-content>
+</ion-card> -->
+<div>
+  
+</div>
+</ion-content>
