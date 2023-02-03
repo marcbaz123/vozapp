@@ -1,6 +1,9 @@
 
-<ion-content >
 
+<ion-content >
+<ion-toolbar>
+  <img src="https://i.postimg.cc/sx36vd9y/Logo-V-1.jpg" alt="">
+</ion-toolbar>
   <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
@@ -33,7 +36,7 @@
      </ion-item>
      <ion-item>
       <ion-checkbox slot="start"></ion-checkbox>
-      <ion-label>I agree to the terms and conditions</ion-label>
+      <ion-label>Seamos Responsables</ion-label>
     </ion-item>
      <div style="text-align: end; margin: 10px">    
       <ion-button (click)="ingresar()" class="normal" color="dark">

@@ -37,15 +37,15 @@
 
   
 <ion-card  *ngFor="let portavoz of portavoces" >
-  <ion-card-header>
+  <ion-card-header >
     <ion-card-title style="text-align:center">{{portavoz.nombre}}</ion-card-title>
    
         
   </ion-card-header>
 
-  <ion-card-content >
+  <ion-card-content class="showcase2">
     
-  <ion-item>
+  <ion-item >
     <img width="150" height="250"  class="image" [src]="portavoz.foto">
   </ion-item>
   <ion-item >

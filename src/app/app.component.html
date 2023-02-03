@@ -11,30 +11,39 @@
 <ion-menu-toggle autoHide=false>
 <ion-content>
   
-  <ion-item *ngIf="uid==='Ka4casxVxmReuaj81Dhsi23BHPc2'" button=true detail=true [routerLink]="['/set-portavoces']" >
+  <ion-item color="dark" button=true detail=true [routerLink]="['/home']" >
+    <ion-label class="normal">Inicio</ion-label>
+    <ion-icon slot="start" name="home-outline"></ion-icon>
+    
+    </ion-item>
+  
+
+  <ion-item color="Light" *ngIf="uid==='Ka4casxVxmReuaj81Dhsi23BHPc2'" button=true detail=true [routerLink]="['/set-portavoces']" >
   <ion-label class="normal">Configuracion portavoz</ion-label>
   <ion-icon slot="start" name="create-sharp"></ion-icon>
 
 </ion-item>
 
-<ion-item button=true detail=true [routerLink]="['/politicas']" >
+<ion-item color="dark" button=true detail=true [routerLink]="['/politicas']" >
 <ion-label class="normal">Politicas y Condiciones</ion-label>
 <ion-icon slot="start" name="warning-outline"></ion-icon>
 
 
 </ion-item>
-<ion-item button=true detail=true [routerLink]="['/home']" >
-  <ion-label class="normal">Inicio</ion-label>
-  <ion-icon slot="start" name="home-outline"></ion-icon>
-  
-  </ion-item>
 
-  <ion-item button=true detail=true [routerLink]="['/portavoz']" >
+  <ion-item color="Light" button=true detail=true [routerLink]="['/portavoz']" >
     <ion-label class="normal">Convertite en PORTAVOZ</ion-label>
     <ion-icon slot="start" name="megaphone-outline"></ion-icon>
     
     </ion-item>
     
+
+    <ion-item color="dark" button=true detail=true (click)="salir()" >
+      <ion-label class="normal">Cerrar Sesion</ion-label>
+      <ion-icon slot="start" name="exit-outline"></ion-icon>
+      
+      </ion-item>
+      
 
 </ion-content>
 </ion-menu-toggle >
