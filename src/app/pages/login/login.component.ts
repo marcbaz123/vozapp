@@ -30,6 +30,7 @@ loading: any;
 toast: any;
 handlerMessage: any;
 uid = '';
+
 suscriberUserInfo: Subscription | undefined;
   constructor(  public menu : MenuController,
     public firebaseauthService : FirebaseauthService,
